@@ -11,8 +11,6 @@
             <div class="container-fluid">
               <a class="navbar-brand" href="../afazeres">
                 Casa da lala e do bibico
-              </a>
-              <a href="/novatarefa" class="btn btn-primary" role="button">Nova Tarefa</a>
             </div>
           </nav>  
     </header>
@@ -43,9 +41,13 @@
                 <section>
              <p class="card-text" style="margin-top: 40px;"><span th:text="${afazer.descricao}"></span></p>
           </section>
-
+        </a>  
+        <form method="post" th:action="@{/delete}" style="margin-top: 20px;">
+          <input type="hidden" name="id" th:value="${id}">
+          <input type="submit" class="btn btn-primary" name="Delete" value="Concluir ação">
+      </form>
+      
         </article>
-     </div>
-   </main>
+        </main>
 </body>
 </html>
